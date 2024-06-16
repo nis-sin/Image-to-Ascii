@@ -1,0 +1,1 @@
+A simple Image to ASCII converter using Pillow and Python. Example image used is Mona Lisa from Wikipedia.
