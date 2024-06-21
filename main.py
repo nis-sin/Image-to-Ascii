@@ -7,8 +7,6 @@ def loopThroughImage(imagePath: str, scale: int) -> list[str]:
     asciiImage = []     # List to store ascii characters from the corresponding pixel brightness
     image = Image.open(imagePath)
     image = image.resize((image.width//scale, image.height//scale))     # Downscale the image
-    print("hello")
-    print(image.width, image.height)
     for i in range(image.height):
         for j in range(image.width):
             pixelBrightness = image.convert("L").getpixel((j,i))      # Convert to greyscale and get pixel greyscale value, https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert
