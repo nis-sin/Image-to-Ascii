@@ -1,23 +1,7 @@
 def pixelToAscii(pixelBrightness: int) -> str:
     ascii = ["@", "#", "%", "?", "*", "+", ";", "."]
     # greyscale value will be used as pixel brightness, values range from 0 to 255
-    if pixelBrightness > 230:
-        return ascii[0]
-    elif pixelBrightness > 200:
-        return ascii[1]
-    elif pixelBrightness > 170:
-        return ascii[2]
-    elif pixelBrightness > 140:
-        return ascii[3]
-    elif pixelBrightness > 110:
-        return ascii[4]
-    elif pixelBrightness > 80:
-        return ascii[5]
-    elif pixelBrightness > 50:
-        return ascii[6]
-    else:
-        return ascii[7]
-
+    return ascii[pixelBrightness // 35]
 
 def loopThroughImage(imagePath: str, scale: int) -> list[str]:
     asciiImage = []     # List to store ascii characters from the corresponding pixel brightness
